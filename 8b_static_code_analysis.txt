@@ -1,0 +1,8 @@
+theia@theiadocker-harryraph207:/home/project/final_project$ pylint server.py
+************* Module server
+server.py:50:0: C0304: Final newline missing (missing-final-newline)
+server.py:6:0: E0401: Unable to import 'flask' (import-error)
+server.py:7:0: E0401: Unable to import 'emotion_detection' (import-error)
+
+-----------------------------------
+Your code has been rated at 9/10
