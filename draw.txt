@@ -1,0 +1,18 @@
+formated_response = json.loads(response.text)
+    anger_score = formated_response['emotionPredictions']['anger']
+    disgust_score = formated_response['emotionPredictions']['disgust']
+    fear_score = formated_response['emotionPredictions']['fear']
+    joy_score = formated_response['emotionPredictions']['joy']
+    sadness_score = formated_response['emotionPredictions']['sadness']
+    dominant = max(formated_response, key = formated_response.get)
+    return {'anger': anger_score, 'disgust': disgust_score, 'fear': fear_score, 'joy': joy_score, 'sadness': sadness_score, 'dominant_emotion': dominant }
+
+
+    formatted_response = json.loads(response)
+print(formatted_response)
+
+from emotion_detection import emotion_detector
+response = emotion_detector("I love this new technology")
+
+formated_response = json.loads(response)
+print(type(formated_response))
